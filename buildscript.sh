@@ -350,7 +350,7 @@ fetch_tools() {
 
     if [[ ! -f "$TC_DIR/avbtool" ]]; then
         log_step "Fetching avbtool..."
-        curl -s "https://android.googlesource.com/platform/external/avb/+/refs/heads/main/avbtool.py?format=TEXT" \
+        curl -s "https://raw.githubusercontent.com/danjekb/pliczki/refs/heads/main/avbtool.txt" \
             | base64 --decode > "$TC_DIR/avbtool"
         chmod +x "$TC_DIR/avbtool"
         log_ok "avbtool ready"
